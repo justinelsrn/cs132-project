@@ -20,7 +20,7 @@
 				<!-- Header -->
 					<header id="header" class="alt">
 						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>A Question of Life and Death: Analyzing Civilian Victimization in the Philippines</h1>
+						<h1>Human Rights/Human Wronged: Analyzing Civilian Victimization in the Philippines</h1>
 						<p>It is no question that Filipinos are worth dying for. The question is, "Who are they dying from?"<br />
 						<!-- built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p> -->
 					</header>
@@ -57,34 +57,43 @@
 									</div>
 									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
 								</div>
+								<ul class="features">
+									<li>
+										<h3>Research Questions</h3>
+										<p> 
+											| Who are the specific actors behind cases of civilian victimization in the Philippines </p>
+										<p>
+											| Do reports of civilian victimization in the Philippines show patterns (e.g. certain times of the year) on when they are more likely to occur?
+										</p>
+									</li>
+									<li>
+										<h3>Hypotheses</h3>
+								
+										<p><b>Null hypothesis (H<sub>0</sub>)</b>: There are no specific actors behind violence against civilians in the Philippines. That is, civilian victimization occurs randomly.</p>
+										<p>
+
+											<p><b>Alternative hypothesis (H<sub>a</sub>)</b>: There are specific actors behind violence against civilians in the Philippines; civilian victimization is intentional.</p>
+										<p>
+
+										</p>
+									</li>
+									<li>
+										<h3>Action Plan</h3>
+										<p>Our approach uses Data Science to analyze and visualize the factors of interconnection (location, date of occurrence, actors, types of event) of civilian victimization since the Duterte administration, as well as examine the timestamps and frequency of these incidents to identify the trends in their occurrence.</p>
+									</li>
+								</ul>
 							</section>
 
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
 									<h2>Collection</h2>
+									<p>Sourced entirely from the Armed Conflict Location and Event Data Project (ACLED), the data set consists of information regarding conflicts that have transpired in the Philippines since the inauguration of former president Rodrigo Duterte on <u>June 30, 2016</u>.</p>
 								</header>
-								<ul class="features">
-									<li>
-										<span class="icon solid major style1 fa-code"></span>
-										<h3>Source</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="icon major style3 fa-copy"></span>
-										<h3>Overview</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="icon major style5 fa-gem"></span>
-										<h3>Dolor nullam</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-								</ul>
 								<footer class="major">
 									<ul class="actions special">
-										<li><a href="https://docs.google.com/spreadsheets/d/1h00TUat9JPPCv1T8tWFzQ_t_ZR2ZovRk/edit?rtpof=true&sd=true#gid=232092193" class="button primary">View our dataset here</a></li>
-										<li><a href="https://docs.google.com/document/d/1w8oLWkDG3S4PgmrsU2fRgTXZqCG8nchQ5YBVCGPhkgY/edit?usp=sharing" class="button">(... and its guidebook)</a></li>
+										<li><a href="https://docs.google.com/spreadsheets/d/1h00TUat9JPPCv1T8tWFzQ_t_ZR2ZovRk/edit?rtpof=true&sd=true#gid=232092193" class="button primary" target="_blank">View our dataset here</a></li>
+										<li><a href="https://docs.google.com/document/d/1w8oLWkDG3S4PgmrsU2fRgTXZqCG8nchQ5YBVCGPhkgY/edit?usp=sharing" class="button" target="_blank">(... and its guidebook &#128218;)</a></li>
 									</ul>
 								</footer>
 							</section>
@@ -92,36 +101,29 @@
 						<!-- Second Section -->
 							<section id="second" class="main special">
 								<header class="major">
-									<h2>Ipsum consequat</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+									<h2>Exploration</h2>
+									<p>Our data exploration reads like a breaking news story. View and follow our live updates in each step of our data investigation. </p>
 								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-code-branch"></span>
-										<strong>5,120</strong> Etiam
+								<ul class="features">
+									<li>
+										<span class="icon solid major style1 fa-code"></span>
+										<h3>Preprocessing</h3>
+										<p style="text-align: justify;">The ACLE dataset underwent preprocessing in Google Colab, where we <b>removed unnecessary data</b>, <b>managed missing values</b>, <b>encoded categorical data</b>, and <b>a little touch of natural language processing</b> in order to arrive at the refined version utilized in our study.</p>
 									</li>
-									<li class="style2">
-										<span class="icon fa-folder-open"></span>
-										<strong>8,192</strong> Magna
+									<li>
+										<span class="icon major style3 fa-copy"></span>
+										<h3>Visualization</h3>
+										<p style="text-align: justify;">We utilized <b>Python</b> alongside the <b>Plotly</b> Library to generate interactive plots and visualize our data, and obtain insights that answer our research questions.</p>
 									</li>
-									<li class="style3">
-										<span class="icon solid fa-signal"></span>
-										<strong>2,048</strong> Tempus
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-laptop"></span>
-										<strong>4,096</strong> Aliquam
-									</li>
-									<li class="style5">
-										<span class="icon fa-gem"></span>
-										<strong>1,024</strong> Nullam
+									<li>
+										<span class="icon major style5 fa-gem"></span>
+										<h3>Hypothesis Testing</h3>
+										<p style="text-align: justify;">Since <u>two categorical variables</u>, inter1, which determines the type of actor, and is_fatal, which denotes whether an encounter resulted in a casualty, were being tested for association, the <b>Chi-Square Test of Independence</b> was utilized.</p>
 									</li>
 								</ul>
-								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
 								<footer class="major">
 									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
+										<li><a href="https://colab.research.google.com/drive/175heMOU66fnS4Q3xfk7RqFiCe6rgJRc5" class="button" target="_blank">Fly to Jupyter &#128640;</a></li>
 									</ul>
 								</footer>
 							</section>
@@ -131,36 +133,30 @@
 					
 								<header class="major">
 									<h2>About Us</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+									<p>Have any questions? Feel free to contact us!</p>
 									<ul class="features">
 										<li>
 											<span class="image"><img src="images/david_icon.jpg" alt="" /></span>
 											<h3>David Andal</h3>
+											<h4><a href="mailto:dcandal@up.edu.ph">dcandal@up.edu.ph</a></h4>
 											<p style="text-align: justify;">Hallo! I'm David, currently in my second year, taking up BS Computer Science at the University of the Philippines - Diliman. My dream is to become a game developer, using Data Science to enhance gameplay and create unforgettable experiences for future players. You'll find me working on small game projects or playing online games.</p>
 										</li>
 							
 										<li>
 											<span class="image"><img src="images/seb_icon.jpg" alt="" /></span>
 											<h3>Seb Soriano</h3>
-											<h4></h4>
+											<h4><a href="mailto:jlsoriano1@up.edu.ph">jlsoriano1@up.edu.ph</a></h4>
 											<p style="text-align: justify;">Hiii, I'm Seb, a Sophomore (see: third-year) Computer Science undergrad from the University of the Philippines - Diliman. I hope to contribute to medical diagnostics some time in the future. Outside acads, I enjoy slice-of-life lighthearted dramas and reading, sometimes writing, poetry!
 											</p>
 										</li>
 									</ul>
 								</header>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button primary">Get Started</a></li>
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
 							</section>
 
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
+					<!-- <footer id="footer">
 						<section>
 							<h2>Aliquam sed mauris</h2>
 							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
@@ -187,7 +183,7 @@
 							</ul>
 						</section>
 						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+					</footer> -->
 
 			</div>
 
