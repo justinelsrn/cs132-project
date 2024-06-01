@@ -63,7 +63,7 @@
 									<li>
 										<h3 style="color:#E50914">Research Questions</h3>
 										<p> 
-											| Who are the specific actors behind cases of civilian victimization in the Philippines </p>
+											| Who are the specific actors behind cases of civilian casualty in the Philippines </p>
 										<p>
 											| Do reports of civilian victimization in the Philippines show patterns (e.g. certain times of the year) on when they are more likely to occur?
 										</p>
@@ -71,13 +71,11 @@
 									<li>
 										<h3 style="color:#E50914">Hypotheses</h3>
 								
-										<p><b>Null hypothesis (H<sub>0</sub>)</b>: There are no specific actors behind violence against civilians in the Philippines. That is, civilian victimization occurs randomly.</p>
-										<p>
+										<p><b>Null hypothesis (H<sub>0</sub>)</b>: There are no specific actors behind civilian casualty. That is, it occurs randomly.</p>
+										
 
-											<p><b>Alternative hypothesis (H<sub>a</sub>)</b>: There are specific actors behind violence against civilians in the Philippines; civilian victimization is intentional.</p>
-										<p>
-
-										</p>
+											<p><b>Alternative hypothesis (H<sub>a</sub>)</b>:  There are specific actors behind civilian casualty in the Philippines; fatal violence against civilians is intentional.</p>
+										
 									</li>
 									<li>
 										<h3 style="color:#E50914">Action Plan</h3>
@@ -127,7 +125,7 @@
 
 								<button type="button" class="collapsible">Graphs</button>
 								<div class="collapsible-content">
-									<h3>Research Question 1: Who are the forces behind civilian victimization across the Philippines since the Duterte administration?</h3>
+									<h3>Research Question 1: Who are the forces behind civilian casualty across the Philippines since the Duterte administration?</h3>
 									<p>For the first graph, Sunburst was chosen to show the most common civilian groups that were targeted in conjunction with their frequent offenders without overcrowding the graph. While the graph is self-explanatory, there are two additional notes about it.</p>
 									<ol>
 										<li><p>The government group includes government workers, political candidates, and both former and incumbent officials.</p></li>
@@ -146,7 +144,42 @@
 
 								<button type="button" class="collapsible">Hypothesis Testing</button>
 								<div class="collapsible-content">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+									<h3>Null hypothesis (H<sub>0</sub>): There are no specific actors behind civilian casualty. That is, it occurs randomly.</h3>
+
+									<h3>Alternative hypothesis (H<sub>a</sub>): There are specific actors behind civilian casualty in the Philippines; fatal violence against civilians is intentional.</h3>
+
+									<p>To address the hypotheses, two variables will be compared, inter1, which determines the type of actor, and is_fatal, which denotes whether an encounter resulted in a casualty. As both variables are categorical, they will be subjected to the Chi-Square Test of Independence to test the relationship between them.</p>
+
+									<table>
+										<tr>
+										  <th>Actor</th>
+										  <th>Not Fatal</th>
+										  <th>Fatal</th>
+										</tr>
+										<tr>
+										  <td>State Force</td>
+										  <td>150</td>
+										  <td>3833</td>
+										</tr>
+										<tr>
+										  <td>Rebel Group</td>
+										  <td>98</td>
+										  <td>303</td>
+										</tr>
+										<tr>
+										  <td>Political Militia</td>
+										  <td>383</td>
+										  <td>3896</td>
+										</tr>
+										<tr>
+										  <td>Identity Militia</td>
+										  <td>16</td>
+										  <td>72</td>
+										</tr>
+									  </table>
+									
+									<h3>The test results, whose computation is available on the Colab link below, show that a <u>p-value < 0.01 < 0.05</u> with <u>dof = 3</u>. Hence, the null hypothesis is <u>rejected</u>. That is, there are indeed specific actors that enact violence on civilians, causing their deaths.</h3>
+
 								</div>
 
 
