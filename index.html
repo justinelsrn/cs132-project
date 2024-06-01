@@ -6,11 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Group 39: Civilian Targeting</title>
+		<title>Group 36: Civilian Targeting</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src='https://cdn.plot.ly/plotly-2.32.0.min.js'></script>
 	</head>
 	<body class="is-preload">
 
@@ -123,12 +124,41 @@
 										<p style="text-align: justify;">Since <u>two categorical variables</u>, inter1, which determines the type of actor, and is_fatal, which denotes whether an encounter resulted in a casualty, were being tested for association, the <b>Chi-Square Test of Independence</b> was utilized.</p>
 									</li>
 								</ul>
+
+								<button type="button" class="collapsible">Graphs</button>
+								<div class="collapsible-content">
+									<h3>Research Question 1: Who are the forces behind civilian victimization across the Philippines since the Duterte administration?</h3>
+									<p>For the first graph, Sunburst was chosen to show the most common civilian groups that were targeted in conjunction with their frequent offenders without overcrowding the graph. While the graph is self-explanatory, there are two additional notes about it.</p>
+									<ol>
+										<li><p>The government group includes government workers, political candidates, and both former and incumbent officials.</p></li>
+										<li><p>Civilians are victims with no specific designation.</p></li>
+									</ol>
+
+									<div id="rq1-plot" style="width:60vw;max-width:60vw;margin-left: auto;"></div>
+
+									<hr>
+
+									<h3>Research Question 2: Do reports of civilian victimization in the Philippines show patterns (e.g. certain times of the year) on when they are more likely to occur?</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+									<div id="rq2-plot" style="width:60vw;max-width:60vw;margin-left: auto;margin-bottom: 2em;"></div>
+								</div>
+
+								<button type="button" class="collapsible">Hypothesis Testing</button>
+								<div class="collapsible-content">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+								</div>
+
+
+
 								<footer class="major">
 									<ul class="actions special">
 										<li><a href="https://colab.research.google.com/drive/175heMOU66fnS4Q3xfk7RqFiCe6rgJRc5" class="button primary" target="_blank">Fly to Jupyter &#128640;</a></li>
 									</ul>
 								</footer>
 							</section>
+
+
 
 						<!-- Get Started -->
 							<section id="cta" class="main special">
@@ -197,6 +227,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/graphs.js"></script>
 
 	</body>
 </html>

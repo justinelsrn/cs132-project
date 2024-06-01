@@ -101,10 +101,10 @@ input, select, textarea {
 
 	body {
 		background-color: #935d8c;
-		background-image: url("images/overlay1.png"), -moz-linear-gradient(45deg, #303030 15%, black 85%);
-		background-image: url("images/overlay1.png"), -webkit-linear-gradient(45deg, #303030 15%, black 85%);
-		background-image: url("images/overlay1.png"), -ms-linear-gradient(45deg, #303030 15%, black 85%);
-		background-image: url("images/overlay1.png"), linear-gradient(45deg, #303030 15%, black 85%);
+		background-image: url("images/overlay1.png	"), -moz-linear-gradient(45deg, #303030 15%, black 85%);
+		background-image: url("images/overlay1.png	"), -webkit-linear-gradient(45deg, #303030 15%, black 85%);
+		background-image: url("images/overlay1.png	"), -ms-linear-gradient(45deg, #303030 15%, black 85%);
+		background-image: url("images/overlay1.png	"), linear-gradient(45deg, #303030 15%, black 85%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3760,6 +3760,65 @@ input, select, textarea {
 			}
 
 		}
+/* Collapsible */
+.collapsible {
+
+	cursor: pointer;
+	/* padding: 18px; */
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+
+	border-radius: 8px;
+	height: 2.75em;
+	line-height: 2.75em;
+	min-width: 9.25em;
+	padding: 0 1.5em;
+	display: inline-block;
+
+	margin-top: 2em;
+  }
+  
+	.collapsible:hover {
+		background-color: rgba(255, 255, 255, 0.075) !important;
+	}
+
+	.active {
+		background-color: rgba(255, 255, 255, 0.2) !important;
+		box-shadow: inset 0 0 0 1px white !important;
+		border-radius: 8px 8px 0px 0px;
+
+	}
+
+	.collapsible-content {
+		padding: 0 1.5em;
+		/* display: none; */
+		overflow: hidden;
+		background-color: white;
+		color: #303030;
+		text-align: left;
+		border-radius: 0px 0px 8px 8px ;
+		max-height: 0;
+		transition: max-height 0.5s ease-out;
+	  }
+	
+	.collapsible-content > p {
+		margin: 2em 0 2em 0;
+	}
+
+	.collapsible-content > h3 {
+		color: #E50914  !important;
+		margin: 2em 0 2em 0;
+		/* margin: 2em 0 2em 0; */
+	}
+
+	.collapsible-content li > p {
+		/* color: #E50914  !important; */
+		margin: 0 0 0 0;
+		/* margin: 2em 0 2em 0; */
+	}
 
 /* Wrapper */
 
