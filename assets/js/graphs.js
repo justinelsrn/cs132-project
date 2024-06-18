@@ -31,13 +31,13 @@ var rq1_data = [{
      'police forces', 'civilians', 'drug suspects', 'farmers', 'government',
      'labor group'],
 'opacity': 1,
-'marker': {'colors': ["#e7717d", "#e7717d", "#e7717d", "#e7717d", "#e7717d", "#e7717d",
-          "#e7717d", "#e7717d", "#e7717d", "#e7717d", "#e7717d", "#e7717d",
-          "#e7717d", "#e7717d", "#e7717d", "#e7717d", "#e7717d", "#e7717d",
-          "#e7717d", "#e7717d", "#e7717d", "#e7717d", "#e7717d", "#e7717d",
-          "#e7717d", "#e7717d", "#e7717d", "#e7717d", "#e7717d", "#e7717d",
-          "#e7717d", "#e7717d", "#afd275", "#afd275", "#afd275", "#afd275",
-          "#afd275"]},
+'marker': {'colors': ["#e7717d", "#ad555e", "#ad555e", "#ad555e", "#ad555e", "#ad555e",
+                    "#ad555e", "#ad555e", "#ad555e", "#ad555e", "#ad555e", "#e7717d",
+                    "#e7717d", "#f5c6cb", "#f5c6cb", "#71373d", "#71373d", "#71373d",
+                    "#e7717d", "#e7717d", "#e7717d", "#e7717d", "#fae3e5", "#fae3e5",
+                    "#fae3e5", "#fae3e5", "#fae3e5", "#71373d", "#71373d", "#71373d",
+                    "#71373d", "#71373d", "#afd275", "#afd275", "#afd275", "#afd275",
+                    "#afd275"]},
 'name': '',
 'parents': ['civilians', 'drug suspects', 'government', 'labor group', 'civilians',
       'drug suspects', 'labor group', 'civilians', 'farmers', 'government',
@@ -51,15 +51,46 @@ var rq1_data = [{
        12,   51,    5,   30, 3542,   19,   61,    4,  640, 5950,  262, 1070,
        79], 
   outsidetextfont: {size: 20, color: "#377eb8"},
-  leaf: {opacity: 0.5},
+  leaf: {opacity: 1
+  },
 //   marker: {line: {width: 2}},
 }];
 
+let rq1_shapes = []
+let rq1_annotations = []
 
 
+const caption_lookup = {'#afd275': 'Victims',
+  '#fae3e5': 'Offenders (Assorted)',
+  '#71373d': 'Offenders (State Forces)',
+  '#e7717d': 'Offenders (Rebel Groups)',
+  '#ad555e': 'Offenders (Political Militia)',
+  '#f5c6cb': 'Offenders (Identity Militia)'}
+const color_list = ["#afd275", "#fae3e5", "#71373d", "#e7717d", "#ad555e", "#f5c6cb"]
+
+for (let c in color_list) {
+  rq1_shapes.push({
+    type:"rect",
+    x0: .06+0.70,
+    y0: (0.975-0.0345*c),
+    x1: .075+0.70,
+    y1: (0.989-0.0345*c),
+    fillcolor: color_list[c]
+  })
+
+  rq1_annotations.push({
+    x: .1+0.69,
+    y: (1-(c*0.034)),
+    text: caption_lookup[color_list[c]],
+    font_size: 9,
+    xanchor: "left",
+    align: 'left',
+    showarrow: false
+  })
+}
 
 var rq1_layout = {
-  autosize: false,
+  autosize: true,
   margin: {l: 0, r: 0, b: 0, t: 100},
   width: 800,
   height: 500,
@@ -70,68 +101,59 @@ var rq1_layout = {
     y: 0.90,
     // automargin: true,
   },
-  annotations: [
-    {
-      x: 0.85,
-      y: 0.6,
-      font: {color: "#e7717d"},
-      xref: 'paper',
-      yref: 'paper',
-      text: 'Offenders',
-      xanchor:'left',
-      showarrow: false,
-      arrowhead: 7,
-    },
-    {
-    font: {color: "#e7717d"},
-    x:0.8,
-    y:0.6,
-    showarrow:false,
-    text:"AB",
-    textangle:0,
-    xanchor:'left',
-    xref:"paper",
-    yref:"paper",
-    bgcolor:"#e7717d"
-    },
-    {
-        x: 0.85,
-        y: 0.7,
-        font: {color: "#afd275"},
-        xref: 'paper',
-        yref: 'paper',
-        text: 'Victims',
-        xanchor:'left',
-        showarrow: false,
-        arrowhead: 7,
-      },
-      {
-      font: {color: "#afd275"},
-      x:0.8,
-      y:0.7,
-      showarrow:false,
-      text:"AB",
-      textangle:0,
-      xanchor:'left',
-      xref:"paper",
-      yref:"paper",
-      bgcolor:"#afd275"
-      }
-  ]
-//   annotations: [
-//     {
-//         color: "#e7717d",
-//         x: 0.75,
-//         y: 0.8,
-//         showarrow: False,
-//         text: "Offenders",
-//         // textangle: 0,
-//         // xanchor: 'left',
-//         // xref: "paper",
-//         // yref: "paper"
-//     }
-//   ]
+  annotations: rq1_annotations,
+  shapes: rq1_shapes,
 };
+
+
+// let rq1_annotations_old = [
+//   {
+//     x: 0.85,
+//     y: 0.6,
+//     font: {color: "#e7717d"},
+//     xref: 'paper',
+//     yref: 'paper',
+//     text: 'Offenders',
+//     xanchor:'left',
+//     showarrow: false,
+//     arrowhead: 7,
+//   },
+//   {
+//   font: {color: "#e7717d"},
+//   x:0.8,
+//   y:0.6,
+//   showarrow:false,
+//   text:"AB",
+//   textangle:0,
+//   xanchor:'left',
+//   xref:"paper",
+//   yref:"paper",
+//   bgcolor:"#e7717d"
+//   },
+//   {
+//       x: 0.85,
+//       y: 0.7,
+//       font: {color: "#afd275"},
+//       xref: 'paper',
+//       yref: 'paper',
+//       text: 'Victims',
+//       xanchor:'left',
+//       showarrow: false,
+//       arrowhead: 7,
+//     },
+//     {
+//     font: {color: "#afd275"},
+//     x:0.8,
+//     y:0.7,
+//     showarrow:false,
+//     text:"AB",
+//     textangle:0,
+//     xanchor:'left',
+//     xref:"paper",
+//     yref:"paper",
+//     bgcolor:"#afd275"
+//     }
+// ]
 
 var rq2_data = [{
     type: 'scatter',
@@ -309,6 +331,6 @@ var rq2_layout = {
     shapes: rq2_shapes
   };
 
-Plotly.newPlot('rq1-plot', rq1_data, rq1_layout);
+Plotly.newPlot('rq1-plot', rq1_data, rq1_layout, {responsive: true});
 
-Plotly.newPlot('rq2-plot', rq2_data, rq2_layout);
+Plotly.newPlot('rq2-plot', rq2_data, rq2_layout, {responsive: true});
