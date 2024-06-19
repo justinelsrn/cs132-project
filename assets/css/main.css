@@ -2502,7 +2502,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		cursor: url('default_cursor_alt.svg') 21 21, default !important;
+		cursor: url('default_cursor.svg') 21 21, default !important;
 		list-style: none;
 		margin-left: -1em;
 		padding-left: 0;
@@ -3090,7 +3090,7 @@ input, select, textarea {
 		}
 
 		#header.alt {
-			padding: 7em 5em 4em 5em ;
+			padding: 7em 5em 0em 5em ;
 		}
 
 			#header.alt h1 {
@@ -3602,6 +3602,8 @@ input, select, textarea {
 				border-bottom-right-radius: 0;
 				border-bottom-left-radius: 0;
 			}
+
+
 
 				#main > .main > .image.main:first-child img {
 					border-top-right-radius: 0.25em;
