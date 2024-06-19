@@ -2265,7 +2265,7 @@ input, select, textarea {
 			border-radius: 100%;
 			padding: 0.65em;
 			margin: 0 0 2em 0;
-			cursor: url('pointer_cursor.svg') 21 21, default !important;
+			cursor: url('default_cursor_alt.svg') 21 21, default !important;
 		}
 
 			.icon.major:before {
@@ -2502,7 +2502,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		cursor: url('pointer_cursor.svg') 21 21, default !important;
+		cursor: url('default_cursor_alt.svg') 21 21, default !important;
 		list-style: none;
 		margin-left: -1em;
 		padding-left: 0;
@@ -2620,7 +2620,7 @@ input, select, textarea {
 /* Icons */
 
 	ul.icons {
-		cursor: default;
+		cursor: url('default_cursor_alt.svg') 21 21, default !important;;
 		list-style: none;
 		padding-left: 0;
 	}
@@ -3269,7 +3269,7 @@ input, select, textarea {
 			margin: 0;
 			padding: 0;
 			list-style: none;
-			cursor: url('pointer_cursor.svg') 21 21, pointer !important;
+			cursor: url('default_cursor_alt.svg') 21 21, default !important;
 		}
 
 			#nav ul li {
@@ -3847,3 +3847,8 @@ input, select, textarea {
 			}
 
 		}
+
+
+	a.news:hover {
+		color:#E50914 !important;
+	}
