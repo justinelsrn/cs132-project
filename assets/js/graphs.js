@@ -66,7 +66,7 @@ const caption_lookup = {'#afd275': 'Victims',
   '#e7717d': 'Offenders (Rebel Groups)',
   '#ad555e': 'Offenders (Political Militia)',
   '#f5c6cb': 'Offenders (Identity Militia)'}
-const color_list = ["#afd275", "#fae3e5", "#71373d", "#e7717d", "#ad555e", "#f5c6cb"]
+const color_list = ["#afd275", "#fae3e5", "#f5c6cb", "#e7717d", "#ad555e", "#71373d"]
 
 for (let c in color_list) {
   rq1_shapes.push({
