@@ -1,5 +1,5 @@
 
-rq2_customdata = ['<BR><b>Total Reports: </b> 5<BR><b>Fatal Reports:</b> 3<BR><b>Fatality Rate:</b> 60.0%',
+const rq2_customdata = ['<BR><b>Total Reports: </b> 5<BR><b>Fatal Reports:</b> 3<BR><b>Fatality Rate:</b> 60.0%',
   '<BR><b>Total Reports: </b> 7<BR><b>Fatal Reports:</b> 5<BR><b>Fatality Rate:</b> 71.43%',
   '<BR><b>Total Reports: </b> 6<BR><b>Fatal Reports:</b> 5<BR><b>Fatality Rate:</b> 83.33%',
   '<BR><b>Total Reports: </b> 5<BR><b>Fatal Reports:</b> 4<BR><b>Fatality Rate:</b> 80.0%',
